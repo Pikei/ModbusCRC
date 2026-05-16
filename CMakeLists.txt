@@ -18,5 +18,5 @@ target_include_directories(ModbusCRC PRIVATE defs)
 target_link_libraries(ModbusCRC PRIVATE nana )
 
 if(MINGW OR WIN32)
-    target_link_options(ModbusCRC PRIVATE "-static-libgcc" "-static-libstdc++" "-static")
+    target_link_options(ModbusCRC PRIVATE "-static-libgcc" "-static-libstdc++" "-static" "-mwindows")
 endif()
